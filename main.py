@@ -13,7 +13,7 @@ sends in each batch, and stays in cash the rest of the time:
      on each side).
 
 Exits are mechanical: a hard stop-loss 0.7% under the position's cost, a
-take-profit at +1.8% over cost, a trailing stop (armed at +0.8%, 0.7% under
+take-profit at +1.5% over cost, a trailing stop (armed at +0.8%, 0.7% under
 the peak value), a momentum-fade exit when the 60-bar return falls to
 -0.2% or worse, and a 600-bar maximum hold. After any exit the bot waits
 30 bars before entering again, so chop cannot churn it. Every order caps
@@ -46,7 +46,7 @@ MOM_UP = 0.006            # one-hour return needed for a momentum entry
 
 # Exit parameters (fractions of the position's cost, fees included).
 STOP_LOSS = 0.007
-TAKE_PROFIT = 0.018
+TAKE_PROFIT = 0.015
 TRAIL_ARM = 0.008
 TRAIL_GIVEBACK = 0.007
 FADE = -0.002             # 60-bar return at or under this exits a position
